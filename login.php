@@ -48,7 +48,6 @@
               } else {
                 header('location: index.php');
               } // echo "Hello " . $_SESSION['userid']; } else { echo
-              "Ko ton tai!";
             }
           } ?>
 
