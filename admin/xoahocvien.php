@@ -1,4 +1,4 @@
-<h1>Xoa Hoc Vien</h1>
+<h1>Xoa</h1>
 <?php
 include('../connect.php');
 
