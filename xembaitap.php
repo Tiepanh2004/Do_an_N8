@@ -56,7 +56,7 @@
             $cau = 0;
             $Kq = "";
             // echo $soCau;
-            $sql = "SELECT dap_an_dung FROM bai_tap";
+            $sql = "SELECT dap_an_dung FROM bai_tap WHERE id_khoa_hoc=$khoaid";
             $result = mysqli_query($conn, $sql);
             while ($dad = mysqli_fetch_array($result)) {
                 $cau = $cau + 1;
