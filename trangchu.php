@@ -106,8 +106,17 @@ main {
 
             <div class="danhsach-khoahoc">
                 <?php
-                $sql = "SELECT * FROM `khoa_hoc` ORDER BY id DESC";
-                $result = mysqli_query($conn, $sql);
+                // Tìm kiếm khóa học
+                if (isset($_GET['tukhoa']) && $_GET['tukhoa'] != "") {
+                    $tukhoa = $_GET['tukhoa'];
+                    $sql = "SELECT * FROM khoa_hoc 
+                            WHERE ten_khoa_hoc = '$tukhoa'
+                            ORDER BY id DESC";
+                } else {
+                    $sql = "SELECT * FROM khoa_hoc ORDER BY id DESC";
+                }
+
+                $result = mysqli_query($conn, $sql); //Code tìm kiếm đến đây
 
                 while ($row = mysqli_fetch_array($result)) {
                     $khoahocId = $row['id'];

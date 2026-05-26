@@ -126,13 +126,16 @@ h1 {
         ?>
         <main>
             <header>
+                <!-- Code thanh tìm kiếm -->
                 <h1><?php echo $title ?></h1>
-                <form action="/tim-kiem" method="GET">
+                <form action="index.php" method="get">
                     <div class="timkiem">
-                        <input type="search" name="q" placeholder="Nhập từ khóa...">
+                        <input type="search" name="tukhoa" placeholder="Nhập từ khóa..."
+                            value="<?php echo isset($_GET['tukhoa']) ? $_GET['tukhoa'] : ''; ?>">
                         <button type="submit">Tìm kiếm</button>
                     </div>
                 </form>
+                <!--Dừng ở đâyyy -->
                 <div class="nguoidung">
                     <a href="index.php?page_layout=Taikhoan"><img style="height: 40px; width: 50px"
                             src="uploads/avatar.jpg" alt=""></a>
