@@ -51,7 +51,11 @@
             <td>
                 <a class="btn" href="index.php?page_layout=capnhatgiangvien&id=<?php echo $row['id'] ?>">Cap
                     nhat</a>
-                <a class="btn" href="index.php?page_layout=xoagiangvien&id=<?php echo $row['id'] ?>">Xoa</a>
+                <a class="btn"
+                    href="index.php?page_layout=xoagiangvien&id=<?php echo $row['id'] ?>"
+                    onclick="return confirm('Bạn có chắc chắn muốn xóa giảng viên này không?')">
+                    Xoa
+                </a>
             </td>
         </tr>
         <?php
